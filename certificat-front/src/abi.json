@@ -1,0 +1,252 @@
+[
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "hashFichier",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proprietaire",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "nomFichier",
+          "type": "string"
+        }
+      ],
+      "name": "CertificatCree",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "ancienProprietaire",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "nouveauProprietaire",
+          "type": "address"
+        }
+      ],
+      "name": "CertificatTransfere",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "certificats",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "hashFichier",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "proprietaire",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "nomFichier",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dateCreation",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "existe",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_hashFichier",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_nomFichier",
+          "type": "string"
+        }
+      ],
+      "name": "enregistrerCertificat",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "hashToCertificat",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "obtenirCertificat",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "hashFichier",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "proprietaire",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "nomFichier",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dateCreation",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_proprietaire",
+          "type": "address"
+        }
+      ],
+      "name": "obtenirCertificatsProprietaire",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "prochainId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_nouveauProprietaire",
+          "type": "address"
+        }
+      ],
+      "name": "transfererCertificat",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_hashFichier",
+          "type": "string"
+        }
+      ],
+      "name": "verifierProprietaireParHash",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "proprietaire",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "existe",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+]
